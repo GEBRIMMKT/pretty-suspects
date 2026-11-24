@@ -46,7 +46,7 @@
   }
 
   const SUSPECTS = D.girls.filter(g => !g.victim);
-  const KIND = { mockup: 'Mockup digital', prototipo: 'Protótipo', final: 'Produto final · foto' };
+  const KIND = { mockup: 'Mockup digital', arte: 'Arte digital plana', prototipo: 'Protótipo', final: 'Produto final · foto' };
   const girl = id => D.girls.find(g => g.id === id);
 
   /* ---------------- peças reutilizáveis ---------------- */
@@ -575,7 +575,7 @@
       ${chapTag(c)}
       <div data-step="0">
         <h2 class="disp prod__title" style="font-size:var(--fs-xxl)"><span>A GAME YOU</span><span>CAN'T PUT DOWN.</span></h2>
-        <div class="prod__legend"><span class="kind kind--mockup">Mockup digital</span><span class="kind kind--prototipo">Protótipo</span><span class="kind kind--final">Produto final · foto</span><span class="muted">Cada imagem indica o que ela é.</span></div>
+        <div class="prod__legend"><span class="kind kind--mockup">Mockup digital</span><span class="kind kind--arte">Arte digital plana</span><span class="kind kind--prototipo">Protótipo</span><span class="kind kind--final">Produto final · foto</span><span class="muted">Cada imagem indica o que ela é.</span></div>
         <div class="prod__hero">${shot(P.hero, '100%').replace('class="shot', 'class="shot shot--hero')}</div>
       </div>
       <div data-scroll-only>
@@ -658,7 +658,7 @@
       <rect x="30" y="${200 - st.h * s}" width="${st.w * s}" height="${st.h * s}" fill="none" stroke="#C5BCB2" stroke-width="1.5"/>
       <text x="30" y="218">Convencional ${st.w}×${st.h} mm</text>
       <rect x="${x2}" y="${200 - gh * s}" width="${gw * s}" height="${gh * s}" fill="rgba(220,82,130,.12)" stroke="#DC5282" stroke-width="2" ${known ? '' : 'stroke-dasharray="6 5"'}/>
-      <text x="${x2}" y="218">${known ? `Pretty Suspects ${cm.w}×${cm.h} mm` : 'Pretty Suspects · a definir'}</text>
+      <text x="${x2}" y="218">${known ? `Jogo ${cm.w}×${cm.h} mm (proposta)` : 'Pretty Suspects · a definir'}</text>
       ${known ? '' : `<text x="${x2 + gw * s / 2}" y="${200 - gh * s / 2}" text-anchor="middle" style="font-size:28px;fill:#DC5282">?</text>`}
     </svg>`;
   }
@@ -799,7 +799,7 @@
         <div><ol class="rv__list rv__list--ev">${T.clues.map(cl => `<li data-ev="${cl.ev === '—' ? '—' : 'EV.' + esc(cl.ev)}">${esc(cl.t)}</li>`).join('')}</ol>
         <div class="rv__others">${T.others.map(t => `<p>${esc(t)}</p>`).join('')}</div></div></div></div>
       <div class="rv" data-step="6"><div class="rv__truthcard">
-        <div><div class="flip" id="flip-truth"><div class="flip__inner"><div class="flip__face">${envelope()}</div><div class="flip__face flip__face--back">${cardFace(card5, 'front')}</div></div></div>
+        <div><div class="flip" id="flip-truth"><div class="flip__inner"><div class="flip__face">${envelope()}</div><div class="flip__face flip__face--back">${T.cardFront ? `<div class="cface"><img src="${T.cardFront}" alt="Carta 05 — The Truth (frente)"></div>` : cardFace(card5, 'front')}</div></div></div>
           <div class="flip__ctrl"><button class="btn btn--ghost" type="button" data-action="flip-truth">Abrir o envelope</button></div></div>
         <div><p class="label" style="opacity:.7">CARD ${esc(card5.n)}</p><h3 class="cinfo__name">${esc(card5.name)}</h3><p class="lede" style="margin-top:16px">Agora a frente pode ser vista: ${card5.content.map(esc).join(', ').toLowerCase()}.</p></div>
       </div></div>

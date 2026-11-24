@@ -250,9 +250,9 @@ window.PS = {
      front / back = artes do grupo. Proporção e medidas em "cardSpec".
      ------------------------------------------------------------------ */
   cardSpec: {
-    ratio: "5 / 7",          // proporção usada nos espaços reservados (largura / altura)
-    size: "",                // A PREENCHER — ex.: "12 × 17 cm"
-    enlargedSize: "",        // A PREENCHER — tamanho da versão ampliada
+    ratio: "90 / 126",       // proporção das cartas (largura / altura)
+    size: "90 × 126 mm (proposta, a aprovar)",       // modelos gerados em _producao (ver 09 — Arquivos para Impressão)
+    enlargedSize: "180 × 252 mm (proposta, a aprovar)",
     paper: "",               // A PREENCHER — papel e gramatura
     finish: "",              // A PREENCHER — acabamento
     sharedBack: ""           // se todas as cartas tiverem o mesmo verso, coloque a imagem aqui
@@ -261,23 +261,23 @@ window.PS = {
     { n: "01", id: "crime", name: "THE CRIME", sub: "O caso", category: "Abertura do caso",
       fn: "Abre a investigação: apresenta o caso e a mensagem anônima.",
       content: ["Nome do caso", "Data", "Local", "Horário aproximado", "Mensagem anônima", "Introdução ao assassinato"],
-      visual: "", front: "", back: "", typeNotes: "" },
+      visual: "", front: "assets/cartas/carta-01-the-crime-frente.jpg", back: "assets/cartas/verso-carta-01.jpg", typeNotes: "" },
     { n: "02", id: "girls-1", name: "THE GIRLS", sub: "Agatha & Tina", category: "Personagens",
       fn: "Apresenta duas suspeitas, com fotos, personalidades, segredos e álibis.",
       content: ["Agatha — The It Girl", "Tina — The Sweetheart", "Fotografias", "Personalidades", "Segredos", "Álibis"],
-      visual: "Duas fichas de investigação, com referências de páginas de revistas e arquivos policiais.", front: "", back: "", typeNotes: "" },
+      visual: "Duas fichas de investigação, com referências de páginas de revistas e arquivos policiais.", front: "assets/cartas/carta-02-the-girls-frente.jpg", back: "assets/cartas/verso-carta-02.jpg", typeNotes: "" },
     { n: "03", id: "girls-2", name: "THE GIRLS", sub: "Laila & Alice", category: "Personagens",
       fn: "Apresenta a terceira suspeita e a vítima, com a última ação de Alice.",
       content: ["Laila — The Mystery Girl", "Alice — The Victim", "Fotografias", "Informações", "Segredos", "Última ação da vítima"],
-      visual: "Montagem editorial de fotografias, recortes e anotações.", front: "", back: "", typeNotes: "" },
+      visual: "Montagem editorial de fotografias, recortes e anotações.", front: "assets/cartas/carta-03-the-girls-frente.jpg", back: "assets/cartas/verso-carta-03.jpg", typeNotes: "" },
     { n: "04", id: "evidence", name: "THE EVIDENCE", sub: "As pistas", category: "Evidências",
       fn: "Reúne as cinco pistas que a turma precisa cruzar.",
       content: ["Fotografia", "Chave", "Mensagem", "Contradição no álibi", "Bilhete misterioso"],
-      visual: "Mural de investigação com elementos conectados graficamente.", front: "", back: "", typeNotes: "" },
+      visual: "Mural de investigação com elementos conectados graficamente.", front: "assets/cartas/carta-04-the-evidence-frente.jpg", back: "assets/cartas/verso-carta-04.jpg", typeNotes: "" },
     { n: "05", id: "truth", name: "THE TRUTH", sub: "Confidencial", category: "Revelação", sealed: true,
       fn: "Fica lacrada no envelope até a votação final.",
       content: ["Identidade da assassina", "Motivo", "Reconstrução do crime", "Explicação das pistas"],
-      visual: "", front: "", back: "", typeNotes: "" }
+      visual: "", front: "", back: "assets/cartas/verso-carta-05.jpg", typeNotes: "" }
   ],
 
   /* ------------------------------------------------------------------
@@ -324,23 +324,23 @@ window.PS = {
 
   /* ------------------------------------------------------------------
      CAP. 10 — PRODUTO / MOCKUPS
-     kind: "mockup" (mockup digital), "prototipo", "final" (foto do produto pronto)
+     kind: "mockup" (mockup digital), "arte" (arte digital plana), "prototipo", "final" (foto do produto pronto)
      spoiler: true = a imagem mostra a frente da carta 05 → fica borrada até a revelação
      ratio = proporção do espaço (largura / altura)
      ------------------------------------------------------------------ */
   product: {
-    hero: { label: "Produto completo — composição publicitária", kind: "mockup", img: "", ratio: "16 / 9", spoiler: false },
+    hero: { label: "Produto completo — composição publicitária", kind: "mockup", img: "assets/mockups/mockup-04-produto-completo-publicitario.jpg", ratio: "16 / 9", spoiler: false },
     shots: [
-      { label: "Embalagem fechada", kind: "mockup", img: "", ratio: "4 / 5", spoiler: false },
-      { label: "Embalagem aberta", kind: "mockup", img: "", ratio: "4 / 5", spoiler: false },
-      { label: "As cinco cartas juntas", kind: "mockup", img: "", ratio: "3 / 2", spoiler: false },
-      { label: "Cartas espalhadas", kind: "mockup", img: "", ratio: "3 / 2", spoiler: false },
-      { label: "Frentes e versos", kind: "mockup", img: "", ratio: "3 / 2", spoiler: false },
+      { label: "Embalagem fechada", kind: "mockup", img: "assets/mockups/mockup-01-embalagem-fechada.jpg", ratio: "16 / 10", spoiler: false },
+      { label: "Embalagem aberta", kind: "mockup", img: "assets/mockups/mockup-02-embalagem-aberta-com-cartas.jpg", ratio: "16 / 11", spoiler: false },
+      { label: "As cinco cartas juntas", kind: "mockup", img: "assets/mockups/mockup-03-cinco-cartas-organizadas.jpg", ratio: "16 / 9", spoiler: false },
+      { label: "Cartas espalhadas", kind: "mockup", img: "assets/mockups/mockup-08-cartas-espalhadas.jpg", ratio: "16 / 10", spoiler: false },
+      { label: "Frentes e versos", kind: "mockup", img: "assets/mockups/mockup-07-frentes-e-versos.jpg", ratio: "16 / 10", spoiler: false },
       { label: "Carta na mão", kind: "mockup", img: "", ratio: "4 / 5", spoiler: false },
-      { label: "Escala ampliada das cartas", kind: "mockup", img: "", ratio: "4 / 5", spoiler: false },
-      { label: "Envelope confidencial", kind: "mockup", img: "", ratio: "4 / 5", spoiler: false },
+      { label: "Escala ampliada das cartas", kind: "mockup", img: "assets/mockups/mockup-05-escala-das-cartas.jpg", ratio: "16 / 10", spoiler: false },
+      { label: "Envelope confidencial", kind: "arte", img: "assets/embalagem/envelope-frente.jpg", ratio: "100 / 136", spoiler: false },
       { label: "Embalagem e cartas juntas", kind: "mockup", img: "", ratio: "3 / 2", spoiler: false },
-      { label: "Mesa de investigação", kind: "mockup", img: "", ratio: "16 / 9", spoiler: false },
+      { label: "Mesa de investigação", kind: "mockup", img: "assets/mockups/mockup-06-mesa-de-investigacao.jpg", ratio: "16 / 10", spoiler: false },
       { label: "Detalhes", kind: "final", img: "", ratio: "1 / 1", spoiler: false },
       { label: "Acabamentos", kind: "final", img: "", ratio: "1 / 1", spoiler: false },
       { label: "Produto materializado", kind: "final", img: "", ratio: "4 / 5", spoiler: false }
@@ -356,13 +356,13 @@ window.PS = {
       "Referências gráficas de arquivos secretos", "Fotografias e elementos editoriais (se fizerem parte do design final)",
       "As cinco cartas físicas", "Envelope lacrado para a carta The Truth"],
     images: [
-      { label: "Frente", img: "", ratio: "4 / 5" },
-      { label: "Verso", img: "", ratio: "4 / 5" },
-      { label: "Interior", img: "", ratio: "4 / 5" }
+      { label: "Frente", img: "assets/embalagem/tampa-frente.jpg", ratio: "107 / 143" },
+      { label: "Verso", img: "assets/embalagem/base-verso.jpg", ratio: "104 / 140" },
+      { label: "Interior", img: "assets/embalagem/forro-base.jpg", ratio: "103 / 139" }
     ],
     fields: [
-      ["Forma de abertura", ""],
-      ["Organização das cartas", ""],
+      ["Forma de abertura", "Caixa de duas partes: a tampa encaixa por cima da base (proposta)."],
+      ["Organização das cartas", "Cartas 01 a 04 soltas; a carta 05 lacrada no envelope; manual em zine de 8 páginas (proposta)."],
       ["Materiais", ""],
       ["Acabamento", ""],
       ["Detalhes gráficos", ""],
@@ -399,10 +399,10 @@ window.PS = {
      cardMM = medidas da carta em milímetros, para o desenho de escala.
      ------------------------------------------------------------------ */
   materials: {
-    cardMM: { w: 0, h: 0 },          // A PREENCHER — ex.: { w: 120, h: 170 }
+    cardMM: { w: 90, h: 126 },        // proposta (a aprovar)
     standardMM: { w: 63, h: 88 },    // carta de baralho convencional (referência)
     specs: [
-      ["Dimensões das cartas", ""], ["Gramatura do papel", ""], ["Tipo de impressão", ""],
+      ["Dimensões das cartas", "90 × 126 mm (proposta) · ampliadas 180 × 252 mm"], ["Gramatura do papel", ""], ["Tipo de impressão", ""],
       ["Tipo de acabamento", ""], ["Material da embalagem", ""], ["Material do envelope", ""],
       ["Técnicas utilizadas", ""], ["Processo de montagem", ""], ["Escolhas de suporte", ""],
       ["Resistência", ""], ["Legibilidade", ""], ["Escala", ""], ["Relação entre forma e função", ""]
@@ -421,7 +421,7 @@ window.PS = {
     { t: "No mínimo 2 cartas materializadas em escala ampliada", done: false, where: "materials" },
     { t: "Sistema gráfico com frente e verso das cartas", done: false, where: "cards" },
     { t: "Regras e instruções de funcionamento", done: true, where: "play" },
-    { t: "Mockups de apresentação do produto", done: false, where: "product" },
+    { t: "Mockups de apresentação do produto", done: true, where: "product" },
     { t: "Apresentação coletiva do processo e do resultado", done: false, where: "process" }
   ],
 
@@ -470,7 +470,7 @@ window.PS = {
     ],
     references: "", // A PREENCHER: fontes das referências visuais, fontes tipográficas, tutoriais
     // Rascunho da declaração de uso de IA — o grupo deve revisar conforme o processo real.
-    aiStatement: "Este website de apresentação foi desenvolvido com apoio de inteligência artificial (Claude, da Anthropic), a partir do enunciado da A2, do briefing, do moodboard, das referências e das imagens fornecidas pelo grupo. A IA apoiou a organização das informações, a programação e a interface do site.\n\nA concepção do jogo, a narrativa, as decisões tipográficas, a composição das cartas, a edição dos elementos gráficos e a materialização do produto foram desenvolvidas pelas integrantes.\n\n[COMPLETAR: outros usos de IA no projeto, por exemplo na geração ou no tratamento das imagens das personagens e do moodboard, se for o caso.]",
+    aiStatement: "Este website de apresentação foi desenvolvido com apoio de inteligência artificial (Claude, da Anthropic), a partir do enunciado da A2, do briefing, do moodboard, das referências e das imagens fornecidas pelo grupo. A IA apoiou a organização das informações, a programação e a interface do site, e gerou modelos-base editáveis das cartas, da embalagem, do envelope, do manual e dos adesivos, além dos mockups digitais, a partir da direção de arte e do conteúdo definidos pelo grupo.\n\nA concepção do jogo, a narrativa, as personagens e a direção visual são do grupo. [COMPLETAR: quais ajustes tipográficos, de composição e de edição o grupo fez nos modelos-base, e como foi a materialização.]\n\n[COMPLETAR: outros usos de IA no projeto, por exemplo na geração ou no tratamento das imagens das personagens e do moodboard, se for o caso.]",
     disclaimer: "Projeto acadêmico fictício. As personagens, os nomes e a história não representam características reais das integrantes."
   }
 
