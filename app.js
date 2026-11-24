@@ -658,7 +658,7 @@
       <rect x="30" y="${200 - st.h * s}" width="${st.w * s}" height="${st.h * s}" fill="none" stroke="#C5BCB2" stroke-width="1.5"/>
       <text x="30" y="218">Convencional ${st.w}×${st.h} mm</text>
       <rect x="${x2}" y="${200 - gh * s}" width="${gw * s}" height="${gh * s}" fill="rgba(220,82,130,.12)" stroke="#DC5282" stroke-width="2" ${known ? '' : 'stroke-dasharray="6 5"'}/>
-      <text x="${x2}" y="218">${known ? `Jogo ${cm.w}×${cm.h} mm (proposta)` : 'Pretty Suspects · a definir'}</text>
+      <text x="${x2}" y="218">${known ? `Jogo ${cm.w}×${cm.h} mm` : 'Pretty Suspects · a definir'}</text>
       ${known ? '' : `<text x="${x2 + gw * s / 2}" y="${200 - gh * s / 2}" text-anchor="middle" style="font-size:28px;fill:#DC5282">?</text>`}
     </svg>`;
   }

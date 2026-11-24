@@ -250,9 +250,9 @@ window.PS = {
      front / back = artes do grupo. Proporção e medidas em "cardSpec".
      ------------------------------------------------------------------ */
   cardSpec: {
-    ratio: "90 / 126",       // proporção das cartas (largura / altura)
-    size: "90 × 126 mm (proposta, a aprovar)",       // modelos gerados em _producao (ver 09 — Arquivos para Impressão)
-    enlargedSize: "180 × 252 mm (proposta, a aprovar)",
+    ratio: "84 / 130",       // proporção das cartas (largura / altura): UNO ampliado
+    size: "84 × 130 mm · proporção do UNO, 1,5× maior",   // modelos em _producao (ver 09 — Arquivos para Impressão)
+    enlargedSize: "168 × 261 mm",
     paper: "",               // A PREENCHER — papel e gramatura
     finish: "",              // A PREENCHER — acabamento
     sharedBack: ""           // se todas as cartas tiverem o mesmo verso, coloque a imagem aqui
@@ -338,7 +338,7 @@ window.PS = {
       { label: "Frentes e versos", kind: "mockup", img: "assets/mockups/mockup-07-frentes-e-versos.jpg", ratio: "16 / 10", spoiler: false },
       { label: "Carta na mão", kind: "mockup", img: "", ratio: "4 / 5", spoiler: false },
       { label: "Escala ampliada das cartas", kind: "mockup", img: "assets/mockups/mockup-05-escala-das-cartas.jpg", ratio: "16 / 10", spoiler: false },
-      { label: "Envelope confidencial", kind: "arte", img: "assets/embalagem/envelope-frente.jpg", ratio: "100 / 136", spoiler: false },
+      { label: "Envelope confidencial", kind: "arte", img: "assets/embalagem/envelope-frente.jpg", ratio: "90 / 136", spoiler: false },
       { label: "Embalagem e cartas juntas", kind: "mockup", img: "", ratio: "3 / 2", spoiler: false },
       { label: "Mesa de investigação", kind: "mockup", img: "assets/mockups/mockup-06-mesa-de-investigacao.jpg", ratio: "16 / 10", spoiler: false },
       { label: "Detalhes", kind: "final", img: "", ratio: "1 / 1", spoiler: false },
@@ -351,18 +351,18 @@ window.PS = {
      CAP. 11 — EMBALAGEM
      ------------------------------------------------------------------ */
   packaging: {
-    concept: "Uma pasta de investigação confidencial.",
+    concept: "Um cartucho tipo UNO com cara de pasta de investigação confidencial.",
     elements: ["Logotipo Pretty Suspects", "Case 001", "The Last Party", "Etiqueta Confidential",
       "Referências gráficas de arquivos secretos", "Fotografias e elementos editoriais (se fizerem parte do design final)",
       "As cinco cartas físicas", "Envelope lacrado para a carta The Truth"],
     images: [
-      { label: "Frente", img: "assets/embalagem/tampa-frente.jpg", ratio: "107 / 143" },
-      { label: "Verso", img: "assets/embalagem/base-verso.jpg", ratio: "104 / 140" },
-      { label: "Interior", img: "assets/embalagem/forro-base.jpg", ratio: "103 / 139" }
+      { label: "Frente", img: "assets/embalagem/cartucho-frente.jpg", ratio: "92 / 138" },
+      { label: "Verso", img: "assets/embalagem/cartucho-verso.jpg", ratio: "92 / 138" },
+      { label: "Cartão interno", img: "assets/embalagem/cartao-interno.jpg", ratio: "88 / 134" }
     ],
     fields: [
-      ["Forma de abertura", "Caixa de duas partes: a tampa encaixa por cima da base (proposta)."],
-      ["Organização das cartas", "Cartas 01 a 04 soltas; a carta 05 lacrada no envelope; manual em zine de 8 páginas (proposta)."],
+      ["Forma de abertura", "Cartucho de uma peça (tipo UNO), com abas de encaixe na tampa e no fundo."],
+      ["Organização das cartas", "Cartas 01 a 04, a carta 05 lacrada no envelope, o manual em zine de 8 páginas e um cartão interno por cima."],
       ["Materiais", ""],
       ["Acabamento", ""],
       ["Detalhes gráficos", ""],
@@ -399,10 +399,10 @@ window.PS = {
      cardMM = medidas da carta em milímetros, para o desenho de escala.
      ------------------------------------------------------------------ */
   materials: {
-    cardMM: { w: 90, h: 126 },        // proposta (a aprovar)
+    cardMM: { w: 84, h: 130 },        // formato UNO ampliado (escolha do grupo)
     standardMM: { w: 63, h: 88 },    // carta de baralho convencional (referência)
     specs: [
-      ["Dimensões das cartas", "90 × 126 mm (proposta) · ampliadas 180 × 252 mm"], ["Gramatura do papel", ""], ["Tipo de impressão", ""],
+      ["Dimensões das cartas", "84 × 130 mm (proporção do UNO, 1,5×) · ampliadas 168 × 261 mm · cantos arredondados"], ["Gramatura do papel", ""], ["Tipo de impressão", ""],
       ["Tipo de acabamento", ""], ["Material da embalagem", ""], ["Material do envelope", ""],
       ["Técnicas utilizadas", ""], ["Processo de montagem", ""], ["Escolhas de suporte", ""],
       ["Resistência", ""], ["Legibilidade", ""], ["Escala", ""], ["Relação entre forma e função", ""]
